@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>结算页</title>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+	</head>
+	<style>
+		.header-top-container{
+			min-width: 1200px;
+			margin: 0 auto;
+		}
+		.header-top{
+			height: 40px;
+			background-color: #f8f8f8;
+			border-bottom: 1px solid #ebebeb;
+		}
+		.header-top-home{
+			float: left;
+		}
+		.header-top-menu{
+			float: right;
+		}
+		.search-container:after{
+			content: "";
+			display: block;
+			clear: both;
+			zoom: 1;
+		}
+		.header-top-container:after{
+			content: '';
+			display: block;
+			clear: both;
+		}
+		.header-top a{
+			line-height: 40px;
+			color: #333333;
+		}
+		.header-top-menu li{
+			float: left;
+			padding-left: 22px;
+		}
+		.header-top .header-top-login{
+			color: #fd4411;
+		}
+		.header-search-container {
+		    min-width: 1200px;
+		    background-color: #fff;
+		}
+		.search-container {
+		    width: 1200px;
+		    margin: 0 auto;
+		}
+		.header-search-logo,.header-search-content {
+		    float: left;
+		}
+		.header-search-code {
+		    float: right;
+		}
+		.header-search-content {
+		    width: 434px;
+			height: 44px;
+			line-height: 44px;
+		    text-align: center;
+		    padding: 30px 0;
+		}
+		.header-search-content > input:first-child {
+			display: block;
+		    width: 85%;
+		    height: 44px;
+		    border: #fb3434 2px solid;
+		    border-radius: 5px 0 0 5px;
+		    box-sizing: border-box;
+		    outline: none;
+		    padding: 0 15px ;
+		    font-size: 23px;
+		    
+		}
+		.header-search-content > input:last-child {
+		    width: 15%;
+		    height: 44px;
+		    background-color: #fb3434;
+		    border-radius: 0 5px 5px 0;
+		    padding:10px 15px;
+		    box-sizing: border-box;
+		}
+		.header-search-content input{
+			float: left;
+		}
+		section nav{
+			height: 50px;
+			background-color: #fb3434
+		}
+		.main-nav-container li{
+			height: 50px;
+			float: left;
+			width: 10%;
+			background-color: #FB3434;
+			color: #FFFFFF;
+			text-align: center;
+			line-height: 50px;
+			
+		}
+		.main-nav-container{
+			padding: 0 50px;
+			width: 1200px;
+			margin: 0 auto;
+			text-align: center;
+		}
+		.main-nav-container li:hover{
+			background-color: navajowhite;
+			color: #FB3434;
+		}
+		.main-nav-container:after {
+			content: "";
+		    display: block;
+		    clear: both;
+		    
+		}
+		.bitter-end{
+			width: 100%;
+			height: 441px;
+			background-color: #444;
+		}
+		.bitter-end-top ul{
+			margin: 43px auto;
+			float: left;
+			padding-left:13% 
+		}
+		.bitter-end-top ul li{
+			padding-top:13px ;
+		}
+		.bitter-end-top ul li a{
+			color: #fff;
+			
+		}
+		.main-nav-container-heio{
+			width: 100%;
+			height: 700px;
+			background-color: white;
+		}
+		.main-nav-container-heio b{
+			margin-left:16% ;
+			font-size: 15px;
+		}
+		.shop{
+			width: 40%;
+			height: 143px;
+			color: #FD4411;
+			margin: 0 auto;
+			background:url(img/TB1adb0OFXXXXXzapXXXXXXXXXX-245-81.png) no-repeat center;
+		}
+		.shop b{
+			font-size: 26px;
+			line-height: 143px;
+			margin-left: 44%;
+		}
+		
+		.shop-get{
+			margin: 0 auto;
+			width: 70%;
+			height: 452px;
+			border-top:1px solid #FF4411;
+			border-bottom:1px solid #FF4411 ;
+		}
+		.shop-get p{
+			width: 100%;
+			height: 26px;
+			background-color: #b3b3b3;
+			color: #F8F8F8;
+			margin-top: 0.5%;
+			line-height: 26px;
+		}
+		.one{
+			height: 57px;
+		}
+		.one div{
+			height: 32px;
+			width: 75%;
+			background-color: #000000;
+			float: left;
+			margin-top: 6px;
+		}
+		.one button{
+			width: 15%;
+			height: 32px;
+			background-color: #FD4411;
+			color: #F8F8F8;
+			float: right;
+			margin-top: 6px;
+		}
+		.two{
+			border-top:1px solid #FF4411;
+			border-bottom:1px solid #FF4411 ;
+			height: 120px;
+		}
+		.two button{
+			height: 51px;
+			width: 15%;
+			background-color: #ff4411;
+			color: #FFFFFF;
+			margin-top:1% ;
+			padding-left: 1%;
+		}
+		.three{
+			border-top:1px solid #FF4411;
+			border-bottom:1px solid #FF4411 ;
+			height: 137px;
+		}
+		.three div{
+			height: 100px;
+			border-top:1px solid #FF4411;
+			margin-top: 0.5%;
+		}
+		.three div b{
+			font-size: 20px;
+			line-height: 100px;
+		}
+		.four{
+			height: 93px;
+			border-bottom:1px solid #FF4411 ;
+		}
+		.a{
+			width: 12%;
+			height: 29px;
+			background-color: #FD4411;
+			margin-top: 0.5%;
+		}
+	</style>
+	<body>
+		<header>
+		    <div class="header-top">
+		        <div class="header-top-container">
+		            <div class="header-top-home">
+		                <a href="#">欢迎来到一淘王，阿里巴巴旗下生活省钱利落！</a>
+		            </div>
+		            <div class="header-top-menu">
+		                <ul>
+		                    <li><a class="header-top-login" href="#">亲，请登录</a><a class="header-top-register" href="#">或注册</a></li>
+		                    <li><a class="header-top-order" href="#">我的订单</a></li>
+		                    <li><a class="header-top-shopping-car" href="#">购物车</a></li>
+		                    <li><a class="header-top-message"href="#">消息</a></li>
+		                    <li><a class="header-top-score" href="#">我的积分</a></li>
+		                </ul>
+		            </div>
+		        </div>
+		    </div>
+		    <div class="header-search-container">
+		        <div class="search-container">
+		            <div class="header-search-logo"><a href="#"><img src="img/logo.png" alt="" height="110px"></a></div>
+		            <div class="header-search-content"><input type="text"><input type="image" src="img/search.png"></div>
+		            <div class="header-search-code"><a href="#"><img src="img/download.png" alt=""height="110px"></a></div>
+		        </div>
+		    </div>
+		</header>
+		<section>
+			<nav>
+				<ul class="main-nav-container"></ul>
+			</nav>
+			<div class="main-nav-container-heio">
+				<div class="shop"><b>结算页</b></div>
+				<b>填写并核对信息</b>
+				<div class="shop-get">
+					<p>送货地址</p>
+					<div class="one">
+						<div>送货地址</div>
+						<button>添加收货地址</button>
+					</div>
+					<div class="two">
+						<p>支付方式</p>
+						<div></div>
+						<button>货到付款</button>
+						<button>在线支付</button>
+					</div>
+					<div class="three">
+						<p>订单详情</p>
+						<div>
+							<b>商品</b>
+							<b>数量</b>
+							<b>单价(元)</b>
+							<b>小计(元)</b>
+						</div>
+					</div>
+					<div class="four">
+					</div>
+					<p>提交订单</p>
+					<button class="a">提交订单</button>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<div class="bitter-end">
+				<div class="bitter-end-top">
+					<ul>
+						<li><a href="#"><b>关于我们</b></a></li>
+						<li><a href="#">关于一淘 </a></li>
+						<li><a href="#">法律声明</a></li>
+						<li><a href="#">诚聘英才</a></li>
+						<li><a href="#">廉政邮箱</a></li>
+					</ul>
+					<ul>
+						<li><a href="#"><b>帮助中心</b></a></li>
+						<li><a href="#">新手指南 </a></li>
+						<li><a href="#">关于返利</a></li>
+						<li><a href="#">关于集分宝 </a></li>
+						<li><a href="#">关于会员特权 </a></li>
+					</ul>
+					<ul>
+						<li><a href="#"><b style="font-size: 30px;">手机一淘</b></a></li>
+						<li><a href="#"><img src="img/qr.png" width="134px" height="164px"/> </a></li>
+					</ul>
+					<ul>
+						<li><a href="#"><b>优惠地图</b></a></li>
+						<li><a href="#">品牌特卖  </a></li>
+						<li><a href="#">限时闪购 </a></li>
+					</ul>
+					<ul>
+						<li><a href="#"><b>商家合作</b></a></li>
+						<li><a href="#">报名入口  </a></li>
+						<li><a href="#">商家端问题 </a></li>
+					</ul>
+				</div>
+			</div>
+			
+		</footer>
+	</body>
+		<script src="js/default.js"></script>
+		<script src="js/jquery-3.2.1.js"></script>
+		<script src="js/balance.js"></script>
+		<script src="detail.js"></script>
+		<script src="js/cart.js"></script>
+		<script src="js/navigater.js"></script>
+		<script src="js/Login.js"></script>
+		<script src="js/Course.js"></script>
+		<script src="js/goods.js"></script>
+		<script src="js/index.js"></script>
+</html>
